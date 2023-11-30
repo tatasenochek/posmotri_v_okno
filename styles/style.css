@@ -45,7 +45,6 @@ ol {
   gap: 30px;
   align-items: flex-end;
   max-inline-size: 1140px;
-  block-size: 534px;
   margin: 0 auto;
 }
 
@@ -57,7 +56,7 @@ ol {
   position: relative;
   inline-size: 711px;
   block-size: 386px;
-  margin-bottom: 13px;
+  margin-block-end: 13px;
 }
 
 .result__video {
@@ -75,11 +74,6 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  min-inline-size: 225px;
-}
-
-.search-form__fieldset:not(:last-of-type) {
-  padding-right: 15px;
 }
 
 .search-form__fieldset-title {
@@ -92,7 +86,6 @@ ol {
   width: fit-content;
   display: flex;
   align-items: center;
-  border: 1px solid transparent;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -141,14 +134,14 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 13px;
-  padding-bottom: 5px;
+  gap: 15px;
+  padding-block-end: 5px;
 }
 
 .search-form__pseudo-checkbox {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 9px;
+  margin-inline-end: 8px;
   inline-size: 15px;
   block-size: 15px;
   outline: 1px solid #fff;
@@ -206,11 +199,11 @@ input[type="checkbox"]:checked + span {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  inline-size: 400px;
+  inline-size: 100%;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 0.94;
@@ -229,12 +222,8 @@ input[type="checkbox"]:checked + span {
   flex-direction: column;
 }
 
-.content__list::-webkit-scrollbar {
-  width: 0;
-}
-
 .content__list-item:not(:last-child) {
-  margin-bottom: 26px;
+  margin-block-end: 30px;
 }
 
 .content__card-link {
@@ -265,15 +254,13 @@ input[type="checkbox"]:checked + span {
   padding: 2px;
 }
 
-
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 6px;
-  word-break: break-all;
+  margin-block-end: 6px;
 }
 
 .content__video-card-description {
@@ -287,13 +274,4 @@ input[type="checkbox"]:checked + span {
 
 .more-button {
   inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.more-button:focus-visible {
-  margin: 2px;
-  inline-size: 396px;
-  padding-bottom: 2px;
 }
